@@ -1,65 +1,195 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import { GearHero } from "./_components/gear-hero";
+
+export const metadata: Metadata = {
+  title: "Home",
+};
+
+const heroStats = [
+  {
+    label: "Supply Focus",
+    value: "Onshore",
+    unit: "Offshore",
+  },
+  {
+    label: "Client Base",
+    value: "Marine",
+    unit: "Industrial",
+  },
+];
+
+const verticals = [
+  {
+    name: "Oil & Gas",
+    title: "Oil field and natural gas equipment and spare parts trading support",
+    copy: "Supply coverage for oil field and natural gas equipment, spare parts, and specialised items used in demanding operating environments.",
+  },
+  {
+    name: "Marine",
+    title: "Pipes, fittings, and specialised castings for marine operations",
+    copy: "Trusted supply support for vessel maintenance, marine systems, and equipment requirements where durability and fit are essential.",
+  },
+  {
+    name: "Industrial And Offshore",
+    title: "Trading support for industrial and offshore equipment requirements",
+    copy: "Serving industrial and offshore clients with dependable sourcing of pipes, fittings, castings, and related spare parts.",
+  },
+];
+
+const advantages = [
+  {
+    title: "Pipes And Fittings Supply",
+    copy: "Supplier of pipes, fittings, and related components aligned to project needs, replacement cycles, and operating demands.",
+  },
+  {
+    title: "Specialised Castings",
+    copy: "Specialised castings sourced for onshore, marine, and offshore industry requirements where quality and consistency build customer confidence.",
+  },
+  {
+    title: "Customer Confidence",
+    copy: "A marketing-focused digital presence built to communicate trust, capability, and reliable support to industrial, marine, and offshore clients.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <section className="hero home-hero">
+        <div className="container hero-grid">
+          <div className="hero-intro reveal-up">
+            <div className="pulse-badge">
+              <span className="pulse-dot" />
+              <span>Onshore, Marine And Offshore Supply</span>
+            </div>
+
+            <h1 className="hero-title home-title">
+              Trusted trading support for <span>industrial, marine and offshore clients.</span>
+            </h1>
+
+            <p className="lead home-lead">
+              AVERON ENERTEK deals in oil field and natural gas equipment and spare
+              parts trading, with supply support for pipes, fittings, and specialised
+              castings serving industrial, marine, onshore, and offshore clients.
+            </p>
+
+            <div className="hero-stats">
+              {heroStats.map((stat, index) => (
+                <article key={stat.label} className={`hero-stat reveal-up delay-${index + 1}`}>
+                  <p>{stat.label}</p>
+                  <strong>
+                    {stat.value}
+                    <span>{stat.unit}</span>
+                  </strong>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <GearHero />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="section-header reveal-up">
+            <span className="eyebrow">Industry Verticals</span>
+            <h2 className="section-title">
+              Solutions aligned to <span>real operating sectors</span>
+            </h2>
+          </div>
+
+          <div className="industry-grid">
+            <article className="industry-feature reveal-up">
+              <div className="industry-photo">
+                <div className="industry-overlay">
+                  <span className="card-kicker">Sector</span>
+                  <h3 className="card-title">{verticals[0].name}</h3>
+                  <p className="card-copy">{verticals[0].copy}</p>
+                </div>
+              </div>
+            </article>
+
+            <article className="industry-card industry-card-solid reveal-up delay-1">
+              <span className="card-kicker">{verticals[1].name}</span>
+              <h3 className="card-title">{verticals[1].title}</h3>
+              <p className="card-copy">{verticals[1].copy}</p>
+            </article>
+
+            <article className="industry-card industry-card-wide reveal-up delay-2">
+              <div>
+                <span className="card-kicker">{verticals[2].name}</span>
+                <h3 className="card-title">{verticals[2].title}</h3>
+                <p className="card-copy">{verticals[2].copy}</p>
+              </div>
+              <div className="coil-visual" aria-hidden="true" />
+            </article>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="section section-contrast">
+        <div className="container">
+          <div className="section-header section-centered reveal-up">
+            <span className="eyebrow">Core Capabilities</span>
+            <h2 className="section-title">
+              Built to strengthen <span>customer confidence</span>
+            </h2>
+          </div>
+
+          <div className="performance-grid">
+            {advantages.map((item, index) => (
+              <article key={item.title} className={`performance-item reveal-up delay-${index + 1}`}>
+                <span className="performance-index">0{index + 1}</span>
+                <h3 className="card-title">{item.title}</h3>
+                <p className="card-copy">{item.copy}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="glass-showcase reveal-up delay-2">
+            <div className="glass-copy">
+              <span className="card-kicker">Supply Overview</span>
+              <h3 className="card-title">
+                Reliable trading support for pipes, fittings, castings, and spare parts
+              </h3>
+              <p className="card-copy">
+                Our business supports customers looking for dependable supply of oil
+                field and natural gas equipment, spare parts, pipes, fittings, and
+                specialised castings with a strong focus on reliability and customer confidence.
+              </p>
+            </div>
+
+            <div className="glass-image-card" aria-hidden="true">
+              <div className="glass-image glass-image-primary" />
+              <div className="glass-float glass-image-secondary" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="cta-panel reveal-up">
+            <div>
+              <span className="card-kicker cta-kicker">Ready To Support</span>
+              <h2 className="cta-title">Need trusted supply support for your next requirement?</h2>
+              <p className="cta-copy">
+                Connect with our team for oil field and natural gas equipment, spare
+                parts trading, pipes, fittings, specialised castings, and urgent sourcing enquiries.
+              </p>
+            </div>
+
+            <div className="cta-actions">
+              <a href="mailto:hello@averonenertek.com" className="cta-button">
+                Submit RFQ
+              </a>
+              <a href="tel:+971500000000" className="cta-link">
+                Technical Support
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
