@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Montserrat-ExtraBold, Montserrat;
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        font-size: 68.91px;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #0080ff;
+      }
+
+      .cls-4, .cls-3 {
+        font-size: 69.16px;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(201.87 687.17)"><tspan class="cls-3" x="0" y="0">AVERON</tspan><tspan class="cls-4" x="315.51" y="0"> </tspan><tspan class="cls-2" x="335.64" y="0">ENERTEK</tspan></text>
+</svg>

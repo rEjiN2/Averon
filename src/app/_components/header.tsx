@@ -9,7 +9,7 @@ const navItems = [
   // { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
-  { href: "/portfolio", label: "Portfolio" },
+  // { href: "/portfolio", label: "Portfolio" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -27,9 +27,10 @@ export function Header() {
             alt="AVERON ENERTEK logo"
             width={120}
             height={120}
-            style={{width : "90px"}}
+            style={{width : "70px"}}
             preload
           />
+          <h1 className="brand-title" style={{ fontWeight : 700 , color: "#0080ff", fontSize:"2.25rem", paddingLeft: "1rem" }}>AVERON ENERTEK</h1>
         </Link>
 
         <button

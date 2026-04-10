@@ -115,6 +115,13 @@ img {
   object-fit: contain;
 }
 
+.brand-title {
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
 .page-title,
 .hero-title,
 .section-title,

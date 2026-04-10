@@ -8,35 +8,41 @@ export const metadata: Metadata = {
 
 const services = [
   {
-    kicker: "01",
-    title: "Oil field and natural gas equipment trading",
-    copy: "Supply support for oil field and natural gas equipment and spare parts across active industrial and energy-facing operations.",
+    title: "Marine and Oil & Gas Spare Parts",
+    copy: "Supply support for marine and oil and gas spare parts across active industrial, offshore, and vessel-facing operations.",
   },
   {
-    kicker: "02",
+    title: "Precision machined and casted components",
+    copy: "Sourcing support for precision machined and casted components where fit, durability, and consistency are essential.",
+  },
+  {
+    title: "Custom made Pressure part components",
+    copy: "Custom-made pressure part components supplied to match project specifications, operating demands, and replacement requirements.",
+  },
+  // {
+  //   title: "Oil field and natural gas equipment trading",
+  //   copy: "Supply support for oil field and natural gas equipment and spare parts across active industrial and energy-facing operations.",
+  // },
+  {
     title: "Pipes and fittings supply",
     copy: "Supplier of pipes and fittings aligned to project requirements, replacement schedules, and operational continuity.",
   },
   {
-    kicker: "03",
     title: "Specialised castings",
     copy: "Sourcing support for specialised castings used in onshore, marine, and offshore industry applications.",
   },
   {
-    kicker: "04",
     title: "Onshore industry supply support",
     copy: "Commercial supply assistance for industrial clients looking for reliable equipment, parts, and component sourcing.",
   },
-  {
-    kicker: "05",
-    title: "Marine industry support",
-    copy: "Serving marine customers with dependable sourcing for vessel-related equipment, maintenance parts, and specialised components.",
-  },
-  {
-    kicker: "06",
-    title: "Offshore client support",
-    copy: "Trading support for offshore operations where quality, timing, and supplier confidence are critical.",
-  },
+  // {
+  //   title: "Marine industry support",
+  //   copy: "Serving marine customers with dependable sourcing for vessel-related equipment, maintenance parts, and specialised components.",
+  // },
+  // {
+  //   title: "Offshore client support",
+  //   copy: "Trading support for offshore operations where quality, timing, and supplier confidence are critical.",
+  // },
 ];
 
 export default function ServicesPage() {
@@ -78,7 +84,6 @@ export default function ServicesPage() {
           <div className="service-grid">
             {services.map((service, index) => (
               <article key={service.title} className={`card reveal-up delay-${(index % 3) + 1}`}>
-                <span className="card-kicker">{service.kicker}</span>
                 <h2 className="card-title">{service.title}</h2>
                 <p className="card-copy">{service.copy}</p>
               </article>
