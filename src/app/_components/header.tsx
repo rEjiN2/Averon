@@ -25,9 +25,10 @@ export function Header() {
             className="brand-logo"
             src="/logo.svg"
             alt="AVERON ENERTEK logo"
-            width={68}
-            height={68}
-            priority
+            width={120}
+            height={120}
+            style={{width : "90px"}}
+            preload
           />
         </Link>
 
